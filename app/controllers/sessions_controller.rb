@@ -9,4 +9,7 @@ class SessionsController < ApplicationController
 
     return redirect_to controller: 'sessions', action: 'new') unless user
 
+    session[:user_id] = user.id
+    @user = user
+
 end
